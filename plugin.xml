@@ -87,6 +87,12 @@ xmlns:android="http://schemas.android.com/apk/res/android"
                     <param name="ios-package" value="CDVLocation"/>
                 </feature>
         </config-file>
+        <edit-config target="NSLocationWhenInUseUsageDescription" file="*-Info.plist" mode="merge">
+            <string>The app use your location when in use</string>
+        </edit-config>
+        <edit-config target="NSLocationAlwaysUsageDescription" file="*-Info.plist" mode="merge">
+            <string>The app use your location always</string>
+        </edit-config>
         <header-file src="src/ios/CDVLocation.h" />
         <source-file src="src/ios/CDVLocation.m" />
         <framework src="CoreLocation.framework" />
