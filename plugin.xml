@@ -90,9 +90,6 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         <edit-config target="NSLocationAlwaysAndWhenInUseUsageDescription" file="*-Info.plist" mode="merge">
             <string>The app always use your location</string>
         </edit-config>
-        <edit-config target="NSLocationWhenInUseUsageDescription" file="*-Info.plist" mode="merge">
-            <string>The app use your location when in use</string>
-        </edit-config>
         <edit-config target="NSLocationAlwaysUsageDescription" file="*-Info.plist" mode="merge">
             <string>The app use your location always</string>
         </edit-config>
