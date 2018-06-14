@@ -141,14 +141,14 @@
         __highAccuracyEnabled = YES;
         // Set distance filter to 5 for a high accuracy. Setting it to "kCLDistanceFilterNone" could provide a
         // higher accuracy, but it's also just spamming the callback with useless reports which drain the battery.
-        self.locationManager.distanceFilter = kCLDistanceFilterNone;
-        // Set desired accuracy to Best.
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-        // self.locationManager.pausesLocationUpdatesAutomatically = NO;
-        // self.locationManager.allowsBackgroundLocationUpdates = YES;
-        // self.locationManager.activityType = CLActivityTypeFitness;
-        // self.locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
         // self.locationManager.distanceFilter = kCLDistanceFilterNone;
+        // Set desired accuracy to Best.
+        // self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        self.locationManager.pausesLocationUpdatesAutomatically = NO;
+        self.locationManager.allowsBackgroundLocationUpdates = YES;
+        self.locationManager.activityType = CLActivityTypeFitness;
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
+        self.locationManager.distanceFilter = kCLDistanceFilterNone;
     } else {
         __highAccuracyEnabled = NO;
         self.locationManager.distanceFilter = 10;
