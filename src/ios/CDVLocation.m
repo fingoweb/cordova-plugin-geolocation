@@ -120,10 +120,8 @@
     NSUInteger code = [CLLocationManager authorizationStatus];
     if (code == kCLAuthorizationStatusNotDetermined && ([self.locationManager respondsToSelector:@selector(requestAlwaysAuthorization)] || [self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)])) { //iOS8+
         __highAccuracyEnabled = enableHighAccuracy;
-        if([[NSBundle mainBundle] objectForInfoDictionaryKey:@"NSLocationAlwaysAndWhenInUseUsageDescription"]){
+        if([[NSBundle mainBundle] objectForInfoDictionaryKey:@"NSLocationAlwaysUsageDescription"]){
             [self.locationManager requestAlwaysAuthorization];
-        } else if([[NSBundle mainBundle] objectForInfoDictionaryKey:@"NSLocationAlwaysUsageDescription"]) {
-            [self.locationManager  requestAlwaysAuthorization];
         } else if([[NSBundle mainBundle] objectForInfoDictionaryKey:@"NSLocationWhenInUseUsageDescription"]) {
             [self.locationManager  requestWhenInUseAuthorization];
         } else {
@@ -368,5 +366,12 @@
     [self _stopLocation];
     [self.locationManager stopUpdatingHeading];
 }
+
+//requestAlwaysAuthorization
+- (void)getAlways:(CDVInvokedUrlCommand*)command
+{
+    [self.locationManager requestAlwaysAuthorization];
+}
+
 
 @end
