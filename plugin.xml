@@ -88,13 +88,13 @@ xmlns:android="http://schemas.android.com/apk/res/android"
                 </feature>
         </config-file>
         <edit-config target="NSLocationAlwaysAndWhenInUseUsageDescription" file="*-Info.plist" mode="merge">
-            <string>The app use your location when in use and always</string>
+            <string>The app uses you location to calculate your training session</string>
         </edit-config>
         <edit-config target="NSLocationAlwaysUsageDescription" file="*-Info.plist" mode="merge">
-            <string>The app use your location when in use</string>
+            <string>The app uses you location to calculate your training session</string>
         </edit-config>
         <edit-config target="NSLocationWhenInUseUsageDescription" file="*-Info.plist" mode="merge">
-            <string>The app always use your location</string>
+            <string>The app uses you location to calculate your training session</string>
         </edit-config>
         <header-file src="src/ios/CDVLocation.h" />
         <source-file src="src/ios/CDVLocation.m" />
