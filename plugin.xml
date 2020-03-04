@@ -87,15 +87,6 @@ xmlns:android="http://schemas.android.com/apk/res/android"
                     <param name="ios-package" value="CDVLocation"/>
                 </feature>
         </config-file>
-        <edit-config target="NSLocationAlwaysAndWhenInUseUsageDescription" file="*-Info.plist" mode="merge">
-            <string>The app will use your location to track speed and distance.</string>
-        </edit-config>
-        <edit-config target="NSLocationAlwaysUsageDescription" file="*-Info.plist" mode="merge">
-            <string>The app will use your location to track speed and distance.</string>
-        </edit-config>
-        <edit-config target="NSLocationWhenInUseUsageDescription" file="*-Info.plist" mode="merge">
-            <string>The app will use your location to track speed and distance.</string>
-        </edit-config>
         <header-file src="src/ios/CDVLocation.h" />
         <source-file src="src/ios/CDVLocation.m" />
         <framework src="CoreLocation.framework" />
